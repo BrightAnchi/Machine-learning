@@ -1,0 +1,68 @@
+For ML is to find a function that to sulotion the progrem, like NL identify、image identify......
+Regeession : The fuction outputs a scalar(數值)
+Classification：Give options(classes),the function outputs the correct one.(選擇題)  
+Structures Learning(結構性學習)：Create something with structure(image,document)
+Example：Youtube 
+1.Function with Unknown Parameters(參數)
+Model：y= b + w*x1  based on domain knowledge  y number of views on 2/26,x1(feature) views on 4/25
+w(weight) & b(bias) are unknown parameters (learned form data)
+2.Definds Loss from Training Data  (Loss is a function of parameters  L(b,w) )
+Loss：how good a set of values is.
+Label(正確數值)    e1=|y(預設值)-lable| , e2,e3.......   
+Loss：L=1/N(訓練個數) E(1 to n) en    (more loss more worse)
+e=|y(預設值)-lable|    L is mean absolute error (MAE)
+e=(y(預設值)-lable)^2    L is mean square error(MSE)
+if y and lable(y^)  are both probability distributions(機率分布) >>> Cross-entropy
+Visual painting can known how good set of values. L more small more good.
+Contour map every line is call Error Surface.
+3.Optimization(最佳化) : w*,b* = arg min L
+Gradient Descent ： Let paraments has only one.  L W Curve 圖
+(Randomly) Pick an intial value W0  
+compute  Differential dL/dw|w=w0 (切線斜率)
+Negativ >>> Increase W  ,  Positive >>> Decrease w
+differential for slope to deside  increase or decrease 
+η*dL/dw|w=w0    η：learning rate(design for yourself)  for design range w0 to w1
+η is a hyperparaments   
+w1 = w0 - η * dL/dw|w=w0 
+Stop time ：1.set frequency  2.dif=0
+Gradient Descent has  problem ：Dose loacl minima truly cause the problem  by Local minima  /  global minima
+3.Opimization
+(Randomly) Pick initial values w0 , b0
+compute diff dL/dw  & diff dL/db  then w=w0,b=b0 
+w1 = w0 - η * dL/dw|w=w0,b=b0   &  b1 = b0 - η * dL/db|w=w0,b=b0 
+Differential can be done in one line in most deep learning frameworks
+Repeat diff to update w and b interatively find w* & b* f
+compute dL/dw & dL/db for vector (- η * dL/dw , - η * dL/db) to (move)update w & b position
+L(w*,b*)=deviation(誤差值)
+Machine learning step1.function with unkown  step2.define loss from training data  step3.optimization
+step1~3 call training not predicat
+Visual painting  y = 0.1k + 0.97x1 by real & estimated can find that has 7 days once repeat
+unknown knownledge： y=b+wx   real L=0.48k  predicat L'=0.28K
+New model：y = b + E(j=1 to 7) wj * xj  real L=o.38K  predicat L'=0.49K
+New model2：y = b + E(j=1 to 28) wj * xj  real L=o.33K  predicat L'=0.46K
+New model3：y = b + E(j=1 to 56) wj * xj  real L=o.32K  predicat L'=0.46K
+Change days paraments can't let model more best.
+Linear model are too simple...... so we need sophisticated modes.
+Linear models have severe limitation ： Model Bias(偏見,限制)   We need a more flexible model.
+Curve = constant(常數項) + sum of a set of functions
+constant are the start of the curve
+compute every curve break to find the slopes of functions an sumary them
+All Piecewise Linear Curves  ：more pieces reqiire more functions
+Beyond Pieceswise Linear ： Approximate continuous curve by a piecewise linear curve
+TO have good approximation,we need sufficient pieces. 
+a lot function >>> curve, a lot curve >>> continious curve (hard sigmoid)
+Sigmoid Function ： y = c * (1 / (1 + (e^ -( b + w * x1)))) 
+If x1 is limit to + , then y will converg to c
+If x1 is limit to - , then y will converg to 0
+y=c*sigmoid(b+wx1)   sigmoid to close in countinious curve 
+
+
+
+
+
+
+
+
+
+
+
