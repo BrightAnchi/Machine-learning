@@ -1,0 +1,20 @@
+step1 function with unknown      Testing data
+step2 define loss from training data   use y to label the testing data
+step3 optimization    upload to kaggle
+General  Guide
+loss on training data
+  large (start from shallower networks,which are easier to optimiza) layer more but worse, is opti
+    model bias>>>model too simple(needle not in haystack) need to redesign your model to make it more fiexible(彈性) by more feautures、Deep learning
+    optimization>>loss not always imply model bias 
+  small
+    loss on testing data
+      small 
+      large 
+        overfitting (traing loss small,teating loss big)>>>more training data、data augmentation(creat new data by yorself)
+                    、constrained model (less features、less parameters、sharing parameters、early stopping、regularization、dropout) 
+                    Bias-complexity Trade-off  
+                    Benchmark corpora  >>Cross validation (split training set & Validation set) not recommend too more
+                    N-foid cross Validation  >>training set split to 3 set to around be train and validation  try 3 modle to avarage MSE
+                    find the best to be your predicat modle 
+        mismatch (training & testing data have different distributions)             
+model bias & overfitting >>>trade-off (split your training data into trainging set and validation set for selection)                     
